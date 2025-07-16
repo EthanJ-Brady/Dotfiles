@@ -1,0 +1,62 @@
+[
+  // Navigation between panes
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w left": "workspace::ActivatePaneLeft",
+      "ctrl-w right": "workspace::ActivatePaneRight",
+      "ctrl-w up": "workspace::ActivatePaneUp",
+      "ctrl-w down": "workspace::ActivatePaneDown"
+    }
+  },
+  // Empty pane, set of keybindings that are available when there is no active editor
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space s f": "file_finder::Toggle", // [s]earch [f]ile
+      "space s p": "projects::OpenRecent" // [s]earch [p]roject
+    }
+  },
+  // Use pageup and pagedown for scrolling
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "pagedown": "vim::ScrollDown",
+      "pageup": "vim::ScrollUp"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "space e": "pane::RevealInProjectPanel", // [e]xplorer
+      "space t i": "editor::ToggleInlayHints", // [t]oggle [i]nlay hints
+      "space s p": "projects::OpenRecent", // [s]earch [p]roject
+      "space s f": "file_finder::Toggle", // [s]earch [f]iles
+      "space m p": "markdown::OpenPreview", // [m]arkdown [p]review
+      "space m P": "markdown::OpenPreviewToTheSide", // [m]arkdown [P]review to the side
+      "space s w": "pane::DeploySearch", // [s]earch [w]ord
+      "space t w": "editor::ToggleSoftWrap", // [t]oggle [w]rap
+      "shift-q": "pane::CloseAllItems" // [q]uit
+    }
+  },
+  // Use miniquotes and minibrackets for quotes and brackets
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-r": "workspace::ToggleRightDock",
+      "cmd-j": "workspace::ToggleBottomDock"
+    }
+  }
+]

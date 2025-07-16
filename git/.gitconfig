@@ -1,0 +1,31 @@
+[advice]
+  skippedCherryPicks = false
+[alias]
+  last = log -1 HEAD
+[core]
+  compression = 9
+  whitespace = error
+  preloadindex = true
+[init]
+  defaultBranch = main
+[log]
+  abbrevCommit = true
+[pull]
+  default = current
+  rebase = true
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+[rebase]
+  autostash = true
+  missingCommitsCheck = warn
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+[url "git@github.com:EthanJ-Brady/"]
+  insteadOf = me:
+[user]
+	email = git@ethanbrady.xyz
+	name = Ethan
