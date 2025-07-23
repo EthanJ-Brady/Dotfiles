@@ -24,3 +24,11 @@ alias gu="git pull"
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'"
 alias gs="git status -s"
 alias gcl="git clone"
+
+# pnpm
+export PNPM_HOME="/Users/ethan/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
