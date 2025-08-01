@@ -1,5 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(git direnv)
+plugins=(
+  git
+  direnv
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  vi-mode
+)
 source $ZSH/oh-my-zsh.sh
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -24,6 +30,11 @@ alias gu="git pull"
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'"
 alias gs="git status -s"
 alias gcl="git clone"
+
+source <(fzf --zsh)
+
+# ZSH autosuggestions completion
+bindkey '^Y' autosuggest-accept
 
 # pnpm
 export PNPM_HOME="/Users/ethan/Library/pnpm"
