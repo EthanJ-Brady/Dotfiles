@@ -1,5 +1,10 @@
 {
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "default_profile": "write",
     "play_sound_when_agent_done": true
   },
   "theme": "One Dark",
